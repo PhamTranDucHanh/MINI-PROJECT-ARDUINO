@@ -1,0 +1,17 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+void setup() {
+  lcd.init();
+  lcd.backlight();
+  Serial.begin(9600);
+}
+
+void loop() {
+  lcd.setCursor(6, 0);
+  lcd.print("DHanh");
+  lcd.setCursor(1, 1);
+  lcd.print("iuu Tnhu nhiu");
+  lcd.scrollDisplayLeft();
+  delay(1000);
+}
